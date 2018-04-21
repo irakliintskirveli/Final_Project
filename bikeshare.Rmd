@@ -1,0 +1,71 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(readr)
+library(tidyverse)
+data <- read.csv("fordGoBikeFinal.csv", stringsAsFactors = FALSE)
+
+data2 <- na.omit(data)
+head(data2)
+```
+
+```{r}
+df2 <- data2[,c("index","duration","lat","lon","lat.end","lon.end","bike.id","user.type","member.birth.year","member.gender","distance.km")]
+df3 <- na.omit(df2)
+head(df2)
+
+```
+
+
+
+```{r}
+# VIM library for using 'aggr'
+library(VIM)
+
+# 'aggr' plots the amount of missing/imputed values in each column
+aggr(df2)
+```
+
+
+```{r}
+df4 <- df3[,c("duration","distance.km")]
+head(df3)
+#Elbow Method for finding the optimal number of clusters
+set.seed(50)
+# Compute and plot wss for k = 2 to k = 15.
+k.max <- 12
+wss <- sapply(1:k.max, 
+              function(k){kmeans(df4, k, nstart=50,iter.max = 15 )$tot.withinss})
+wss
+wss1 <- plot(1:k.max, wss,
+        type="b", pch = 19, frame = FALSE, 
+        xlab="Number of clusters K",
+        ylab="Total within-clusters sum of squares")
+
+```
+
+```{r}
+set.seed(50)
+clusters <- kmeans(df4[,c("duration","distance.km")], 3)
+
+# Save the cluster number in the dataset as column 'Rider_Type'
+df4$Rider_Type <- as.factor(clusters$cluster)
+
+library(ggplot2)
+library(ggfortify)
+str(clusters)
+autoplot(clusters, data = df2)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

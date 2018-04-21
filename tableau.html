@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SF Bike Sharing Data</title>
+        
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="/data_final/style.css"/>
+        
+  <!-- Bootstrap css -->
+        
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+      
+  <!-- NAV BAR HERE -->
+        
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      
+        <a href="/data_final/index" class="navbar-brand">SF Bike Sharing Analysis</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Analysis<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="/data_final/tableau">Tableau</a></li>
+                          <li><a href="/data_final/rkmeans">R K-Means</a></li>
+                        </ul>
+          </li>
+          <li><a href="https://github.com/geoff567/data_final" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+        
+      <!-- END OF NAVBAR -->
+        
+</head>
+
+<body style="background-color:lightblue">            
+  <div class="container"">
+            <div class="row" style="padding-top: 40px;">
+                <div class="col-xs-12 col-md-9">
+                  <h1>Tableau</h1>
+                </div>
+            </div>                  
+            <div class="row" style="padding-top: 5px;">
+                    <div class="col-xs-12  col-md-12">
+                        <div class="iframeContainer">
+                            <div class='tableauPlaceholder' id='viz1524188723540' style='position: relative'><noscript>
+                                <a href='#'><img alt='Trip Duration ~ Yr Born ' 
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CitiBike_8&#47;TripDurationYrBorn&#47;1_rss.png' 
+                                    style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'>
+                                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
+                                        <param name='site_root' value='' /><param name='name' value='CitiBike_8&#47;TripDurationYrBorn' /><param name='tabs' value='no' /
+                                        <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CitiBike_8&#47;TripDurationYrBorn&#47;1.png' /> 
+                                        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' /></object>
+                            </div>                
+                                <script type='text/javascript'>                   
+                                    var divElement = document.getElementById('viz1524188723540');                    
+                                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                    vizElement.style.width='1000px';vizElement.style.height='827px';                   
+                                    var scriptElement = document.createElement('script');                    
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                </script>
+                            <br>    
+                            <div class='tableauPlaceholder' id='viz1524328750204' style="padding-top: 20px; float: center"><noscript>
+                                <a href='#'><img alt='Ford GoBike ' 
+                                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fo&#47;fordGoBikeSF1&#47;FordGoBike&#47;1_rss.png' 
+                                    style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'>
+                                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                                        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                                        <param name='name' value='fordGoBikeSF1&#47;FordGoBike' /><param name='tabs' value='no' />
+                                        <param name='toolbar' value='yes' />
+                                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fo&#47;fordGoBikeSF1&#47;FordGoBike&#47;1.png' /> 
+                                        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' /></object>
+                            </div>                
+                                <script type='text/javascript'>                    
+                                    var divElement = document.getElementById('viz1524328750204');                    
+                                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                                    var scriptElement = document.createElement('script');                    
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                </script>
+                        
+                         </div>
+                    </div>
+            </div>       
+  </div>          
+</body>
+
+</html>

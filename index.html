@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html Lang="en">
-
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Final Project </title>
+	<meta charset="utf-8">
+	<title>SF Bike Sharing Data</title>
+	
+	<!-- Our CSS -->
+	<link rel="stylesheet" type="text/css" href="/data_final/style.css"/>
+	
+	<!-- Bootstrap css -->
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 
-<body>
-	<div class="container">
-    <div class="jumbotron" )>
-      <div class="container">
-        <h1>Final Project (we need a title for project) </h1>
+	<!-- NAV BAR HERE -->
+	
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="/data_final/index" class="navbar-brand">SF Bike Sharing Analysis</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+		  		<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Analysis<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="/data_final/tableau">Tableau</a></li>
+                        	<li><a href="/data_final/rkmeans">R K-Means</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+		  		<li><a href="https://github.com/geoff567/data_final" target="_blank">GitHub</a></li>
+        </ul>
       </div>
     </div>
-    <div class="sigline1">
-    	<p>UC Irvine : Data Analytics & Visualization </p>
-    </div>
-    <div class="sigline2">
-    	<p>CONTRIBUTORS:  Marsalis Paige, Tony Fernandez, Geoffrey Booker & Irakli Intskiirveli</p>
-    </div>
   </div>
-  <div class="container"">
-        
-		<div class="box box-left">
-                    <section id="intro">
-                        <h2>Summary</h2>
-                        <hr>
+	
+<!-- END OF NAVBAR -->
+	
+</head>
+<body style="background-color:lightblue">
+	
+		<div class="container-fluid" style="padding-top: 100px">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
 
-                        <section id="summary">
-                            <p> Pharagraph1. text (about project and data) </p>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h2>SF Bike Sharing Analysis</h2>
+                <hr>
+                <img class = "img-responsive" src="images/bkshare.jpg" style="width:100%; float: center; margin: 5px;" alt="first image" >
 
-                            <p> Paragraph2.  (how we analized.)</p>
+              </div>
+            </div>
 
-                            <p> Paragraph3 text (brif summary of results) </p>
+        </div>
+        <div class="col-md-3">
 
-                            <ul>
-                                <li> Var1 vs. Var2 </li>
-                                <li> Var4 (%) vs. var 5 </li>
-                                <li> Var6 (%) vs. Var7 </li>
-                                <li> Var10 (mph) vs. var 15 </li>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h2 style="float: left">Group Members</h2>
+                  <hr>
+									<h4>Marsalis Paige</h4>
+									<h4>Tony Fernandez</h4>
+									<h4>Irakli Intskiirveli</h4>
+									<h4>Geoffrey Booker</h4>
+              
+              </div>
 
-                            </ul>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
 
-                        </section>
-
-                    </section>
-    </div>                
-
-
-
+			</div>
+		</div>
+	<!-- Our JS -->
+	<script type="text/javascript" src="../static/js/layers.js"></script>
 </body>
-
 </html>
